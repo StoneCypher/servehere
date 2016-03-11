@@ -3,7 +3,9 @@
   "description": "Sets up a webserver immediately for this directory",
   "synopsis": [
     "$ servehere",
-    "$ servehere 3000"
+    "$ servehere 3000",
+    "$ servehere --port 3000",
+    "$ servehere --mime customMime.json"
   ],
   "footer": "Project home: [underline]{https://github.com/StoneCypher/servehere/}"
 }
