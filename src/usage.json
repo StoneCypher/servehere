@@ -1,0 +1,9 @@
+{
+  "title": "servehere",
+  "description": "Sets up a webserver immediately for this directory",
+  "synopsis": [
+    "$ servehere",
+    "$ servehere 3000"
+  ],
+  "footer": "Project home: [underline]{https://github.com/StoneCypher/servehere/}"
+}
