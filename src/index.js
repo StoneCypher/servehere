@@ -24,7 +24,7 @@ if (cli.help) {
 
   app.listen(cli.port, function () {
     if (!(cli.silent)) {
-      console.log('Example app listening on port ' + cli.port.toString() + '!');
+      console.log('servehere listening on port ' + cli.port.toString());
     }
   });
 
