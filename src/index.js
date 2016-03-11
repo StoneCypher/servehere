@@ -1,5 +1,4 @@
-
-var arghelp
+#!/usr/bin/env node
 
 var cla     = require('command-line-args')(require('./arghelp.js')),
     cli     = cla.parse(),
