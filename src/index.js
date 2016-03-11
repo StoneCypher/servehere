@@ -21,6 +21,8 @@ if (cli.help) {
     res.send('Hello World!');
   });
 
+  app.use(express.static(__dirname));
+
   app.listen(cli.port, function () {
     if (!(cli.silent)) {
       console.log('Example app listening on port ' + cli.port.toString() + '!');
