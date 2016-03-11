@@ -1,6 +1,6 @@
 {
   "name": "servehere",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Serve from the local directory, immediately",
   "main": "src/index.js",
   "bin": {
@@ -30,5 +30,8 @@
   "homepage": "https://github.com/StoneCypher/servehere#readme",
   "dependencies": {
     "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "command-line-args": "^2.1.6"
   }
 }
