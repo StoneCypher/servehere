@@ -20,7 +20,7 @@ if (cli.help) {
     res.send('Hello World!');
   });
 
-  app.use(express.static(__dirname));
+  app.use(express.static(process.cwd()));
 
   app.listen(cli.port, function () {
     if (!(cli.silent)) {
