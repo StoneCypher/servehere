@@ -6,7 +6,8 @@ Serve from the local directory, immediately
 ```
 npm install -g servehere
 cd ~/
-mkdir servehere_example && cd servehere_example && echo "hello, dave" > index.html && servehere
+mkdir servehere_example && cd servehere_example && echo "hello, dave" > index.html
+servehere
 ```
 
 Now hit [http://localhost:4400/index.html](http://localhost:4400/index.html).
