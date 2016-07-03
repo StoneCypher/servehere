@@ -18,11 +18,11 @@ Now hit [http://localhost:4400/index.html](http://localhost:4400/index.html).
 
 ## Usage
 
-`--port` / `-p`: Set the port.  Defaults to 2345.  Ports below 1024 may need account privileges on unix machines.
+`--port` / `-p`: Set the port.  Defaults to 4400.  Ports below 1024 may need account privileges on unix machines.
 
-`--jsonapi` / `-j`: Pretend to be a JSON api (send `application/json` for files without extensions)
+`--jsonapi` / `-j`: Pretend to be a JSON api (send `application/json` for files without extensions; default is `text/html`)
 
-`--silent` / `-s`: Be silent (no output)
+`--silent` / `-s`: Be silent (no output; default is verbose)
 
 `--help` / `-h`: Show help in the console
 
