@@ -20,11 +20,19 @@ if (cli.help) {
     res.send('Hello World!');
   });
 
+  if (cli.jsonapi) {
+    if (!(cli.silent)) {
+      console.log(' - mounting as json api')
+    }
+    express.static.mime.default_type = "application/json";
+    express.static.mime.define({'application/json': ['']});
+  }
+
   app.use(express.static(process.cwd()));
 
   app.listen(cli.port, function () {
     if (!(cli.silent)) {
-      console.log('servehere listening on port ' + cli.port.toString());
+      console.log(' - servehere listening on port ' + cli.port.toString());
     }
   });
 

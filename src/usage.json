@@ -3,6 +3,8 @@
   "description": "Sets up a webserver immediately for this directory",
   "synopsis": [
     "$ servehere",
+    "$ servehere -j",
+    "$ servehere --jsonapi",
     "$ servehere 3000",
     "$ servehere --port 3000",
     "$ servehere --mime customMime.json"
