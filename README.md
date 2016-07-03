@@ -5,8 +5,8 @@ Serve from the local directory, immediately
 
 ```
 npm install -g servehere
-cd ~/
-mkdir servehere_example && cd servehere_example && echo "hello, dave" > index.html
+mkdir servehere_example && cd servehere_example
+echo "hello, dave" > index.html
 servehere
 ```
 
@@ -18,7 +18,7 @@ Now hit [http://localhost:4400/index.html](http://localhost:4400/index.html).
 
 ## Usage
 
-`--port` / `-p`: Set the port
+`--port` / `-p`: Set the port.  Defaults to 2345.  Ports below 1024 may need account privileges on unix machines.
 
 `--jsonapi` / `-j`: Pretend to be a JSON api (send `application/json` for files without extensions)
 
