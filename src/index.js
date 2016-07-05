@@ -20,6 +20,14 @@ if (cli.help) {
     res.send('Hello World!');
   });
 
+  if (cli.cors) {
+    app.use( (req,res,next) => {
+      res.header('Access-Control-Allow-Origin',  '*');
+      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+      next();
+    } );
+  }
+
   if (cli.jsonapi) {
     if (!(cli.silent)) {
       console.log(' - mounting as json api')
