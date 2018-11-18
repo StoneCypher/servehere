@@ -34,7 +34,7 @@ if (cli.help) {
     express.static.mime.define({'application/json': ['']});
   }
 
-  app.use(express.static(process.cwd()));
+  app.use(express.static(cli.directory));
 
   app.listen(cli.port, function () {
     if (!(cli.silent)) {

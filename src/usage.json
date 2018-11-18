@@ -7,6 +7,8 @@
     "$ servehere --jsonapi",
     "$ servehere -c",
     "$ servehere --cors",
+    "$ servehere -d ./docs",
+    "$ servehere --directory ./docs",
     "$ servehere 3000",
     "$ servehere --port 3000",
     "$ servehere --mime customMime.json"
