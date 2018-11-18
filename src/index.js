@@ -14,9 +14,9 @@ if (cli.help) {
 
 } else {
 
-  app.get('/', function(req, res) {
-    res.send('Hello World!');
-  });
+  // app.get('/', function(req, res) {
+  //   res.send('Hello World!');
+  // });
 
   if (cli.cors) {
     app.use( (req,res,next) => {
