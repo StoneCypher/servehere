@@ -30,6 +30,7 @@
   "homepage": "https://github.com/StoneCypher/servehere#readme",
   "dependencies": {
     "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
     "express": "^4.13.4"
   }
 }
