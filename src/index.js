@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
-var cla     = require('command-line-args')(require('./arghelp.js')),
-    cli     = cla.parse(),
-
+var cli     = require('command-line-args')(require('./arghelp.js')),
     express = require('express'),
     app     = express();
 
