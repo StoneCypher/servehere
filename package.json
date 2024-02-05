@@ -1,6 +1,6 @@
 {
   "name": "servehere",
-  "version": "1.9.4",
+  "version": "1.10.0",
   "description": "Serve from the local directory, immediately",
   "main": "src/js/index.js",
   "bin": {
@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "vitest run --coverage --mode development --reporter=verbose",
-    "build": "npm run test"
+    "changelog": "rm -f CHANGELOG.md && rm -f ./src/doc_md/CHANGELOG.md && better_git_changelog -b && cp CHANGELOG.* ./src/doc_md/",
+    "build": "npm run test && npm run changelog"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^1.2.2",
+    "better_git_changelog": "^1.6.3",
     "vitest": "^1.2.2"
   }
 }
