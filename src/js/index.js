@@ -21,8 +21,6 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
 
 } else {
 
-  console.log(cli);
-
   let server = false;
 
   if (cli.cors) {
@@ -52,7 +50,9 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
   app.use(express.static(cli.directory));
 
   if (cli.dro) {
-    dro = `${require('fs').readFileSync(cli.dro)}`;
+    dro = require('fs')
+            .readFileSync(cli.dro)
+            .toString();
   }
 
   drosc = cli.drosc;
@@ -64,7 +64,8 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
           ? (drosc || 404)
           : 404
       ).send(
-        dro || page404)
+        dro || page404
+      )
   );
 
   server = app.listen(cli.port, function () {
