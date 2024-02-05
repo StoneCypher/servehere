@@ -5,6 +5,7 @@ const args = [
   { name: "port",      alias: "p", type: Number,  typelabel: '{underline port}', defaultValue: 4400,  defaultOption: true, description: "Set what port {bold ServeHere} should serve on" },
   { name: "directory", alias: "d", type: String,  typelabel: '{underline file}', defaultValue: './',                       description: "Choose which directory to serve from, if not here" },
   { name: "cors",      alias: "c",                                                                                         description: "Emit open-ended CORS headers, often to support mock API development" },
+  { name: "haltroute", alias: "z", type: Boolean,                                defaultValue: false,                      description: "hook /z-terminate to kill the server by client" },
   { name: "jsonapi",   alias: "j", type: Boolean,                                defaultValue: false,                      description: "Serve no-extension files as application/json, to mimic a JSON api" },
   { name: "silent",    alias: "s", type: Boolean,                                defaultValue: false,                      description: "Whether to run without output" },
   { name: "dro",       alias: "r", type: String,  typelabel: '{underline file}', defaultValue: false,                      description: "Filename of default root object, typically for SPAs" },
@@ -35,7 +36,9 @@ const sections = [
     { desc: '{underline Default root object} - serve {bold ./foo/bar.html} for any missing call',
       example: '$ servehere -r docs/index.html'},
     { desc: '{underline Default root object} - serve {bold ./foo/bar.html} for any missing call with HTTP 200',
-      example: '$ servehere -r docs/index.html -R 200'}
+      example: '$ servehere -r docs/index.html -R 200'},
+    { desc: '{underline Halt route} - serve {bold ./z-terminate} to halt the serve from the client',
+      example: '$ servehere -z'}
   ] },
 
   { header: 'Installation', content: [

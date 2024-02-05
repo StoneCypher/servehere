@@ -21,6 +21,10 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
 
 } else {
 
+  console.log(cli);
+
+  let server = false;
+
   if (cli.cors) {
     app.use( (req,res,next) => {
       res.header('Access-Control-Allow-Origin',  '*');
@@ -37,6 +41,14 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
     express.static.mime.define({'application/json': ['']});
   }
 
+  if (cli.haltroute) {
+    app.get('/z-terminate', (req, res) => {
+      res.send('ending server');
+      res.end();
+      server.close( () => console.log('HTTP server closed') );
+    });
+  }
+
   app.use(express.static(cli.directory));
 
   if (cli.dro) {
@@ -45,9 +57,17 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
 
   drosc = cli.drosc;
 
-  app.use( (_req, res, _next) => res.status(dro? (drosc || 404) : 404).send(dro || page404) );
+  app.use(
+    (_req, res, _next) =>
+      res.status(
+        dro
+          ? (drosc || 404)
+          : 404
+      ).send(
+        dro || page404)
+  );
 
-  app.listen(cli.port, function () {
+  server = app.listen(cli.port, function () {
     if (!(cli.silent)) {
       console.log(' - servehere listening on port ' + cli.port.toString());
     }

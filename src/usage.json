@@ -11,6 +11,7 @@
     "$ servehere --directory ./docs",
     "$ servehere 3000",
     "$ servehere --port 3000",
+    "$ servehere -z",
     "$ servehere --mime customMime.json"
   ],
   "footer": "Project home: [underline]{https://github.com/StoneCypher/servehere/}"
