@@ -1,6 +1,6 @@
 {
   "name": "servehere",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "Serve from the local directory, immediately",
   "main": "src/js/index.js",
   "bin": {
