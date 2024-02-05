@@ -70,7 +70,7 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
 
   server = app.listen(cli.port, function () {
     if (!(cli.silent)) {
-      console.log(' - servehere listening on port ' + cli.port.toString());
+      console.log(` - servehere listening at http://localhost:${cli.port.toString()}/`);
     }
   });
 

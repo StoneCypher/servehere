@@ -1,5 +1,14 @@
 # servehere
-Serve from the local directory, immediately
+
+Host a webserver from the local directory, immediately
+
+
+
+
+
+&nbsp;
+
+&nbsp;
 
 ## tl;dr
 
@@ -14,7 +23,11 @@ Now hit [http://localhost:4400](http://localhost:4400).
 
 
 
-## Usage
+&nbsp;
+
+&nbsp;
+
+## Command-line arguments
 
 `--port` / `-p`: Set the port.  Defaults to 4400.  Ports below 1024 may need account privileges on unix machines.
 
@@ -26,11 +39,36 @@ Now hit [http://localhost:4400](http://localhost:4400).
 
 `--silent` / `-s`: Be silent (no output; default is verbose)
 
+`--haltroute` / `-z`: Hook `/z-terminate` as a route that will halt the server when opened
+
 `--help` / `-h`: Show help in the console
 
 
 
 
+
+&nbsp;
+
+&nbsp;
+
+## Usage examples
+
+* Run a server, sharing the current directory on default host `localhost` and default port `4400`
+    * `servehere`
+* Run a server, sharing the current directory on default host `localhost` and custom port `12345`
+    * `servehere -p 12345`
+* Run a server, shipping CORS allow-all headers, set up as a JSON api, shipping the contents of a subdirectory "fixtures"
+    * `servehere -c -j -d fixtures/`
+* Run a server in silent mode (don't write anything in console) with a halt route
+    * `servehere -s -z`
+
+
+
+
+
+&nbsp;
+
+&nbsp;
 
 ## ... why?
 
@@ -43,6 +81,10 @@ Also, this is a quick way to stub the JSON backend of something when I want to s
 
 
 
+
+&nbsp;
+
+&nbsp;
 
 Polemic :neckbeard:
 -------------------
