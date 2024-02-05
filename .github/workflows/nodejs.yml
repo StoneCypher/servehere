@@ -63,8 +63,6 @@ jobs:
 
   release:
 
-    if: (github.event.pusher.name == github.event.repository.owner.name) && (github.ref == 'refs/heads/main')
-
     needs: [build, verify-version-bump]
 
     runs-on: ubuntu-latest
