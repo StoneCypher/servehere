@@ -33,7 +33,7 @@
   "dependencies": {
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
-    "express": "^4.13.4"
+    "express": "^4.19.2"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^1.2.2",
